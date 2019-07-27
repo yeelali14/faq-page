@@ -1,0 +1,32 @@
+[
+    {
+        "ID": 1,
+        "Question": "The average human body contains how many pints of blood?",
+        "Answer": "Nine.",
+        "Category": "Biology"
+    },
+    {
+        "ID": 2,
+        "Question": "Which TV character said, “Live long and prosper”?",
+        "Answer": "Mr Spock from Star Trek.",
+        "Category": "Movies and Tv shows"
+    },
+    {
+        "ID": 3,
+        "Question": "Which of the planets is closest to the sun?",
+        "Answer": "Mercury.",
+        "Category": "Astronomy"
+    },
+    {
+        "ID": 4,
+        "Question": "How many letters are there in the Arabic alphabet?",
+        "Answer": "28.",
+        "Category": "Languages"
+    },
+    {
+        "ID": 5,
+        "Question": "In which 1979 film was the spaceship called Nostromo? ",
+        "Answer": "Alien.",
+        "Category": "Movies and Tv shows"
+    }
+]

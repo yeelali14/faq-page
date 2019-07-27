@@ -1,0 +1,118 @@
+<div class="container p-5" *ngIf="faqArray">
+  <div class="p-2" *ngFor="let f of faqArray">
+    <div class="row">
+      <div class="col-1 question-decor">Q.</div>
+      <div class="col-10 mt-3 question-txt">{{f.Question}}</div>
+      <div class="col-1 question-toggle" (click)="showCurrentResult(f.ID)">
+        <i class="fas fa-chevron-circle-down" [ngClass]="{'fa-rotate-180': idx == f.ID }"></i>
+      </div>
+    </div>
+    <div *ngIf="idx == f.ID" class="row answer-row">
+      <div class="col-1 answer-decor">A.</div>
+      <div class="col-11 mt-3 answer-txt">{{f.Answer}}</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- By Category -->
+<div class="container p-5">
+  <div class="col-12 g-title">
+    FAQ by categories
+  </div>
+
+  <div class="row pt-5">
+    <div class="col-11 category-title">Biology</div>
+    <div class="col-1 category-toggle" (click)="openCategory('Biology')">
+      <i class="fas fa-chevron-circle-down" [ngClass]="{'fa-rotate-180': isBiology }"></i>
+    </div>
+  </div>
+
+  <div *ngIf="isBiology">
+    <div class="p-2" *ngFor="let f of biologyArr">
+      <div class="row">
+        <div class="col-1 question-decor">Q.</div>
+        <div class="col-9 mt-3 question-txt">{{f.Question}}</div>
+        <div class="col-2 question-toggle" (click)="showCurrentResult(f.ID)">
+          <i class="fas fa-chevron-circle-down" [ngClass]="{'fa-rotate-180': idx == f.ID }"></i>
+        </div>
+      </div>
+      <div *ngIf="idx == f.ID" class="row answer-row">
+        <div class="col-1 answer-decor">A.</div>
+        <div class="col-11 mt-3 answer-txt">{{f.Answer}}</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row pt-5">
+    <div class="col-11 category-title">Movies and Tv shows</div>
+    <div class="col-1 category-toggle" (click)="openCategory('Movies and Tv shows')">
+      <i class="fas fa-chevron-circle-down" [ngClass]="{'fa-rotate-180': isMovie }"></i>
+    </div>
+  </div>
+
+  <div *ngIf="isMovie">
+    <div class="p-2" *ngFor="let f of movieTvArr">
+      <div class="row">
+        <div class="col-1 question-decor">Q.</div>
+        <div class="col-9 mt-3 question-txt">{{f.Question}}</div>
+        <div class="col-2 question-toggle" (click)="showCurrentResult(f.ID)">
+          <i class="fas fa-chevron-circle-down" [ngClass]="{'fa-rotate-180': idx == f.ID }"></i>
+        </div>
+      </div>
+      <div *ngIf="idx == f.ID" class="row answer-row">
+        <div class="col-1 answer-decor">A.</div>
+        <div class="col-11 mt-3 answer-txt">{{f.Answer}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row pt-5">
+      <div class="col-11 category-title">Astronomy</div>
+      <div class="col-1 category-toggle" (click)="openCategory('Astronomy')">
+        <i class="fas fa-chevron-circle-down" [ngClass]="{'fa-rotate-180': isAstronomy }"></i>
+      </div>
+    </div>
+
+    <div *ngIf="isAstronomy">
+        <div class="p-2" *ngFor="let f of astronomyArr">
+            <div class="row">
+              <div class="col-1 question-decor">Q.</div>
+              <div class="col-9 mt-3 question-txt">{{f.Question}}</div>
+              <div class="col-2 question-toggle" (click)="showCurrentResult(f.ID)">
+                <i class="fas fa-chevron-circle-down" [ngClass]="{'fa-rotate-180': idx == f.ID }"></i>
+              </div>
+            </div>
+            <div *ngIf="idx == f.ID" class="row answer-row">
+              <div class="col-1 answer-decor">A.</div>
+              <div class="col-11 mt-3 answer-txt">{{f.Answer}}</div>
+            </div>
+          </div>
+    </div>
+
+
+    <div class="row pt-5">
+        <div class="col-11 category-title">Languages</div>
+        <div class="col-1 category-toggle" (click)="openCategory('Languages')">
+          <i class="fas fa-chevron-circle-down" [ngClass]="{'fa-rotate-180': isLanguages }"></i>
+        </div>
+      </div>
+
+      <div *ngIf="isLanguages">
+          <div class="p-2" *ngFor="let f of languageArr">
+              <div class="row">
+                <div class="col-1 question-decor">Q.</div>
+                <div class="col-9 mt-3 question-txt">{{f.Question}}</div>
+                <div class="col-2 question-toggle" (click)="showCurrentResult(f.ID)">
+                  <i class="fas fa-chevron-circle-down" [ngClass]="{'fa-rotate-180': idx == f.ID }"></i>
+                </div>
+              </div>
+              <div *ngIf="idx == f.ID" class="row answer-row">
+                <div class="col-1 answer-decor">A.</div>
+                <div class="col-11 mt-3 answer-txt">{{f.Answer}}</div>
+              </div>
+            </div>
+      </div>
+
+</div>
